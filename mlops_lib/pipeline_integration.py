@@ -24,7 +24,7 @@ class PipelineIntegrator:
     def run_training_pipeline(
         self,
         trainer,
-        evaluator, # NOVO PARÂMETRO
+        evaluator, 
         X_train: pd.DataFrame,
         y_train: pd.Series,
         X_test: pd.DataFrame,

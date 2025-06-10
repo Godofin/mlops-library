@@ -1,6 +1,5 @@
 import mlflow
 from mlflow.tracking import MlflowClient
-# CORREÇÃO: A anotação de tipo para ModelVersion mudou em versões recentes do MLflow
 from mlflow.entities.model_registry import ModelVersion
 from utils.logger import setup_logger
 
@@ -77,7 +76,6 @@ class ModelManager:
         """
         model_uri = f"models:/{model_name}/{stage}"
         logger.info(f"Carregando modelo '{model_name}' do estagio '{stage}'...")
-        # O 'flavor' deve ser conhecido, mlflow.pyfunc é uma interface genérica
         loaded_model = mlflow.pyfunc.load_model(model_uri)
         logger.info("Modelo carregado com sucesso.")
         return loaded_model

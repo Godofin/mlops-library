@@ -26,7 +26,7 @@ class DeepLearningTrainer(BaseTrainer):
             Input(shape=(X_train.shape[1],)),
             Dense(64, activation='relu'),
             Dense(32, activation='relu'),
-            Dense(1) # Output layer for regression, change for classification
+            Dense(1)
         ])
         
         model.compile(optimizer='adam', loss='mean_squared_error')
@@ -36,7 +36,7 @@ class DeepLearningTrainer(BaseTrainer):
             epochs=epochs,
             batch_size=batch_size,
             callbacks=[MLflowMetricsCallback()],
-            verbose=0 # Set to 1 or 2 to see progress
+            verbose=0
         )
         return model
 

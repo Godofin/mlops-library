@@ -23,7 +23,6 @@ def setup_logger(name, level=logging.INFO):
     logger = logging.getLogger(name)
     logger.setLevel(level)
     
-    # Avoid adding handlers multiple times
     if not logger.handlers:
         logger.addHandler(handler)
         

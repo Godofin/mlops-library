@@ -14,6 +14,3 @@ class ClassificationTrainer(BaseTrainer):
         model = LogisticRegression(**params, random_state=42)
         model.fit(X_train, y_train)
         return model
-
-# O método evaluate() foi removido. Os outros trainers (Regression, Clustering, etc.)
-# seguem o mesmo padrão de terem apenas o método train().

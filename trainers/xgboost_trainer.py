@@ -11,9 +11,7 @@ class XGBoostTrainer(BaseTrainer):
         """Treina um modelo XGBClassifier."""
         if params is None:
             params = {}
-        
-        # O XGBoost pode usar o `early_stopping_rounds` se um `eval_set` for fornecido
-        # Por simplicidade aqui, vamos apenas treinar com os parâmetros dados.
+
         model = XGBClassifier(**params, random_state=42, use_label_encoder=False, eval_metric='logloss')
         model.fit(X_train, y_train)
         return model

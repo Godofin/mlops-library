@@ -14,7 +14,7 @@ from trainers.classification_trainer import ClassificationTrainer
 from trainers.regression_trainer import RegressionTrainer
 from trainers.clustering_trainer import ClusteringTrainer
 
-# --- NOVOS IMPORTS: EVALUATORS ---
+# Evaluators
 from evaluators.classification_evaluator import ClassificationEvaluator
 from evaluators.regression_evaluator import RegressionEvaluator
 from evaluators.clustering_evaluator import ClusteringEvaluator
