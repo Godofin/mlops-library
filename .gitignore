@@ -1,0 +1,18 @@
+# Ambientes virtuais
+venv/
+env/
+.env
+
+# Pastas geradas pelo MLflow e Python
+mlruns/
+__pycache__/
+*.pyc
+
+# Pastas de build do empacotamento
+build/
+dist/
+*.egg-info/
+
+# Arquivos de IDE
+.vscode/
+.idea/
